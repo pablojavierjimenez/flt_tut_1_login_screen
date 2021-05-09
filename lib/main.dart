@@ -50,6 +50,7 @@ class WelcomeScreen extends StatelessWidget {
           ),
           Expanded(
             child: Column(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: <Widget>[
                 RichText(
                   textAlign: TextAlign.center,
@@ -68,6 +69,7 @@ class WelcomeScreen extends StatelessWidget {
                 ),
                 FittedBox(
                   child: Container(
+                    margin: EdgeInsets.only(bottom: 25),
                     padding: EdgeInsets.symmetric(
                       horizontal: 25,
                       vertical: 16,
