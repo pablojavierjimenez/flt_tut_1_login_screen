@@ -19,7 +19,7 @@ class MyApp extends StatelessWidget {
             color: Colors.white,
             fontWeight: FontWeight.bold,
           ),
-          button: TextStyle(color: kPrimaryColor),
+          button: TextStyle(color: Colors.black),
           headline5: TextStyle(
             color: Colors.white,
             fontWeight: FontWeight.normal,
@@ -66,6 +66,33 @@ class WelcomeScreen extends StatelessWidget {
                     ],
                   ),
                 ),
+                FittedBox(
+                  child: Container(
+                    padding: EdgeInsets.symmetric(
+                      horizontal: 25,
+                      vertical: 16,
+                    ),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(25),
+                      color: kPrimaryColor,
+                    ),
+                    child: Row(
+                      children: <Widget>[
+                        Text(
+                          "START LEARNINNG",
+                          style: Theme.of(context).textTheme.button,
+                        ),
+                        SizedBox(
+                          width: 10,
+                        ),
+                        Icon(
+                          Icons.arrow_forward,
+                          color: Colors.black,
+                        )
+                      ],
+                    ),
+                  ),
+                )
               ],
             ),
           )
