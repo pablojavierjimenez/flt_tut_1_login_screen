@@ -1,3 +1,4 @@
+import 'package:flt_tut_1_login_screen/constants.dart';
 import 'package:flutter/material.dart';
 
 class SignInScreen extends StatelessWidget {
@@ -20,22 +21,44 @@ class SignInScreen extends StatelessWidget {
           ),
           Expanded(
             flex: 4,
-            child: Column(
-              children: <Widget>[
-                Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: <Widget>[
-                    Text(
-                      "SIGN IN",
-                      style: Theme.of(context).textTheme.headline4,
-                    ),
-                    Text(
-                      "SIGN UP",
-                      style: Theme.of(context).textTheme.button,
-                    )
-                  ],
-                )
-              ],
+            child: Padding(
+              padding: const EdgeInsets.symmetric(horizontal: 16),
+              child: Column(
+                children: <Widget>[
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Text(
+                        "SIGN IN",
+                        style: Theme.of(context).textTheme.headline4,
+                      ),
+                      Text(
+                        "SIGN UP",
+                        style: Theme.of(context).textTheme.button,
+                      )
+                    ],
+                  ),
+                  Row(
+                    crossAxisAlignment: CrossAxisAlignment.center,
+                    children: <Widget>[
+                      Padding(
+                        padding: const EdgeInsets.only(right: 16),
+                        child: Icon(
+                          Icons.alternate_email,
+                          color: kPrimaryColor,
+                        ),
+                      ),
+                      Expanded(
+                        child: TextField(
+                          decoration: InputDecoration(
+                            hintText: "Email Address",
+                          ),
+                        ),
+                      )
+                    ],
+                  ),
+                ],
+              ),
             ),
           ),
         ],
