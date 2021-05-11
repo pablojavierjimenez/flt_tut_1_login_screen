@@ -1,4 +1,5 @@
 import 'package:flt_tut_1_login_screen/constants.dart';
+import 'package:flt_tut_1_login_screen/signin_screen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -68,30 +69,39 @@ class WelcomeScreen extends StatelessWidget {
                   ),
                 ),
                 FittedBox(
-                  child: Container(
-                    margin: EdgeInsets.only(bottom: 25),
-                    padding: EdgeInsets.symmetric(
-                      horizontal: 25,
-                      vertical: 16,
-                    ),
-                    decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
-                      color: kPrimaryColor,
-                    ),
-                    child: Row(
-                      children: <Widget>[
-                        Text(
-                          "START LEARNINNG",
-                          style: Theme.of(context).textTheme.button,
-                        ),
-                        SizedBox(
-                          width: 10,
-                        ),
-                        Icon(
-                          Icons.arrow_forward,
-                          color: Colors.black,
-                        )
-                      ],
+                  child: GestureDetector(
+                    onTap: () {
+                      Navigator.push(context, MaterialPageRoute(
+                        builder: (context) {
+                          return SignInScreen();
+                        },
+                      ));
+                    },
+                    child: Container(
+                      margin: EdgeInsets.only(bottom: 25),
+                      padding: EdgeInsets.symmetric(
+                        horizontal: 25,
+                        vertical: 16,
+                      ),
+                      decoration: BoxDecoration(
+                        borderRadius: BorderRadius.circular(25),
+                        color: kPrimaryColor,
+                      ),
+                      child: Row(
+                        children: <Widget>[
+                          Text(
+                            "START LEARNINNG",
+                            style: Theme.of(context).textTheme.button,
+                          ),
+                          SizedBox(
+                            width: 10,
+                          ),
+                          Icon(
+                            Icons.arrow_forward,
+                            color: Colors.black,
+                          )
+                        ],
+                      ),
                     ),
                   ),
                 )
