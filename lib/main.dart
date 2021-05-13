@@ -29,7 +29,7 @@ class MyApp extends StatelessWidget {
         inputDecorationTheme: InputDecorationTheme(
           enabledBorder: UnderlineInputBorder(
             borderSide: BorderSide(
-              color: Colors.white,
+              color: Colors.white.withOpacity(.15),
             ),
           ),
         ),

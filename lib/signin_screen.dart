@@ -38,21 +38,60 @@ class SignInScreen extends StatelessWidget {
                       )
                     ],
                   ),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 25),
+                    child: Row(
+                      crossAxisAlignment: CrossAxisAlignment.center,
+                      children: <Widget>[
+                        Padding(
+                          padding: const EdgeInsets.only(right: 16),
+                          child: Icon(
+                            Icons.alternate_email,
+                            color: kPrimaryColor,
+                          ),
+                        ),
+                        Expanded(
+                          child: TextField(
+                            decoration: InputDecoration(
+                              hintText: "Email Address",
+                            ),
+                          ),
+                        )
+                      ],
+                    ),
+                  ),
                   Row(
                     crossAxisAlignment: CrossAxisAlignment.center,
                     children: <Widget>[
                       Padding(
                         padding: const EdgeInsets.only(right: 16),
                         child: Icon(
-                          Icons.alternate_email,
+                          Icons.lock,
                           color: kPrimaryColor,
                         ),
                       ),
                       Expanded(
                         child: TextField(
                           decoration: InputDecoration(
-                            hintText: "Email Address",
+                            hintText: "Password",
                           ),
+                        ),
+                      )
+                    ],
+                  ),
+                  Row(
+                    children: <Widget>[
+                      Container(
+                        padding: EdgeInsets.all(16),
+                        decoration: BoxDecoration(
+                          shape: BoxShape.circle,
+                          border: Border.all(
+                            color: Colors.white.withOpacity(.5),
+                          ),
+                        ),
+                        child: Icon(
+                          Icons.facebook,
+                          color: Colors.white.withOpacity(.5),
                         ),
                       )
                     ],
