@@ -38,8 +38,9 @@ class SignInScreen extends StatelessWidget {
                       )
                     ],
                   ),
+                  Spacer(),
                   Padding(
-                    padding: const EdgeInsets.only(bottom: 25),
+                    padding: const EdgeInsets.only(bottom: 30),
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: <Widget>[
@@ -79,22 +80,54 @@ class SignInScreen extends StatelessWidget {
                       )
                     ],
                   ),
-                  Row(
-                    children: <Widget>[
-                      Container(
-                        padding: EdgeInsets.all(16),
-                        decoration: BoxDecoration(
-                          shape: BoxShape.circle,
-                          border: Border.all(
+                  Spacer(),
+                  Padding(
+                    padding: const EdgeInsets.only(bottom: 30),
+                    child: Row(
+                      children: <Widget>[
+                        Container(
+                          padding: EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: Colors.white.withOpacity(.5),
+                            ),
+                          ),
+                          child: Icon(
+                            Icons.android,
                             color: Colors.white.withOpacity(.5),
                           ),
                         ),
-                        child: Icon(
-                          Icons.facebook,
-                          color: Colors.white.withOpacity(.5),
+                        SizedBox(
+                          width: 20,
                         ),
-                      )
-                    ],
+                        Container(
+                          padding: EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            border: Border.all(
+                              color: Colors.white.withOpacity(.5),
+                            ),
+                          ),
+                          child: Icon(
+                            Icons.chat,
+                            color: Colors.white.withOpacity(.5),
+                          ),
+                        ),
+                        Spacer(),
+                        Container(
+                          padding: EdgeInsets.all(6),
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: kPrimaryColor,
+                          ),
+                          child: Icon(
+                            Icons.arrow_forward,
+                            color: Colors.black,
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ],
               ),
